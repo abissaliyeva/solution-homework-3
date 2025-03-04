@@ -2,10 +2,11 @@ package assignment1;
 
 import mud.Room;
 
-public interface IDungeonBuilder {
+import java.util.List;
 
-    public void setName(String name);
-    public String getName();
-    public void addRoom(Room room);
-    public void addNPC(NPC npc);
+public interface IDungeonBuilder {
+    IDungeonBuilder setName(String name);
+    IDungeonBuilder addRoom(Room room);
+    IDungeonBuilder addNPC(NPC npc);
+    Dungeon build();
 }
